@@ -1,0 +1,32 @@
+
+while True:
+  print("------------Convêniencias Tabajara------------")
+  print("-----------Digite (-0) para encerrar-----------")
+  n = 1
+  total = 0
+
+  while True:
+    produto = float(input("Valor do Produto {}: R$ ".format(n)))
+    n += 1
+    total += produto
+    if produto == 0:
+      break
+
+  print("------------------------------------")
+
+  print("Valor Total da Compra: R$ {:.2f}".format(total))
+  dinheiro = float(input("Dinheiro do cliente: R$ "))
+  print("Troco: R$ {:.2f}".format(dinheiro - total))
+
+  print("------------------------------------")
+
+  reset = input("Se deseja reiniciar digite 0, caso deseje encerrar digite 1:")
+  if reset == "0":
+    espaco()
+    continue
+
+  else:
+    espaco()
+    print("------------------------------------")
+    print("Encerrando o caixa...")
+    break
